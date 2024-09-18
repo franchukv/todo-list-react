@@ -1,0 +1,45 @@
+.priority-button {
+  display: flex;
+  position: relative;
+
+  &__input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+
+    &[value='high'] + .priority-button__title {
+      color: $brown;
+      background: $lightPink;
+    }
+
+    &[value='medium'] + .priority-button__title {
+      color: #b07289;
+      background: #f8f2f4;
+    }
+
+    &[value='low'] + .priority-button__title {
+      color: #bf97a6;
+      background: #f9f4f6;
+    }
+
+    &:checked + .priority-button__title {
+      color: $white;
+      background: $pink;
+    }
+  }
+
+  &__title {
+    display: flex;
+    padding: 5px 8px;
+    align-items: center;
+    column-gap: 5px;
+    font-family: $openSans;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+}

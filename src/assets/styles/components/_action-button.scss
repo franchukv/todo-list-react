@@ -1,0 +1,44 @@
+.action-button {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  transition: $transition;
+  border-radius: 6px;
+  position: relative;
+
+  &:hover {
+    background-color: $lightPink;
+  }
+
+  &:active {
+    filter: brightness(0.95);
+  }
+
+  &--check {
+    background-image: url(../../images/svg/checkmark.svg);
+  }
+
+  &--refresh {
+    background-image: url(../../images/svg/refresh.svg);
+  }
+
+  &--edit {
+    background-image: url(../../images/svg/edit.svg);
+  }
+
+  &--remove {
+    background-image: url(../../images/svg/remove.svg);
+  }
+
+  &[disabled] {
+    filter: grayscale(1);
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+}
