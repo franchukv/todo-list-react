@@ -1,4 +1,4 @@
-# ToDo List App
+# To-Do List App
 
 Tech stack: React, ContextAPI, SCSS
 
